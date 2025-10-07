@@ -1,8 +1,7 @@
 package es.etg.psp.calc;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import es.etg.psp.calc.util.Fichero;
 
 public class Lanzador {
 
@@ -12,18 +11,19 @@ public class Lanzador {
     public static void main(String[] args) {
 		try {
 			Process process = Runtime.getRuntime().exec(COMANDOS);
-			StringBuilder output = new StringBuilder();
+			/*StringBuilder output = new StringBuilder();
 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String line;
 			while ((line = reader.readLine()) != null) {
 				output.append(line).append("\n");
-			}
+			}*/
 
         //Dejamos el programa bloqueado hasta que termine el otro.
 			int exitVal = process.waitFor();
 			if (exitVal == 0) {
-				System.out.println(output);
+				
+				System.out.println(Fichero.leer());
 				System.exit(0);
 			} else {
                 System.out.println(process.getErrorStream().readAllBytes());

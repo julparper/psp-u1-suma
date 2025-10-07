@@ -25,3 +25,6 @@ Este ejemplo hace lo siguiente:
 2. Nos movemos a la carpeta `target\classes` y ejecutamos en lanzador.
 
 
+# Con ficheros
+
+ESta solución es igual a la anterior, salvo que ahora los datos se pasan usando un fichero.
