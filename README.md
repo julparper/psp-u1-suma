@@ -8,6 +8,15 @@ Este ejemplo hace lo siguiente:
   - es.etg.psp.calc.Lanzador
 
 
+```mermaid
+flowchart LR
+
+F["Lanzador"]--"2 números"-->G[Suma]
+
+G-.resultado.->F
+
+```
+
 ## Ejecutar el programa
 
 ### Compilación y Ejecución Manual:
@@ -28,3 +37,15 @@ Este ejemplo hace lo siguiente:
 # Con ficheros
 
 ESta solución es igual a la anterior, salvo que ahora los datos se pasan usando un fichero.
+
+```mermaid
+flowchart LR
+
+F["Lanzador"]--"2 números"-->G[Suma]
+
+
+
+G-.escribir(resultado).->Fichero
+F-.leer(resultado).->Fichero
+
+```
